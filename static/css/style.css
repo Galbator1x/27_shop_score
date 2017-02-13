@@ -1,0 +1,111 @@
+body {
+  font-size: 1em;
+}
+
+.backlog-waiting {
+  text-align: center;
+  color: #FF4136;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.another-info {
+  margin-top: 150px;
+}
+
+@media (min-width: 1px) {
+  .another-info-text,
+  .backlog-waiting {
+    font-size: 1.3em;
+  }
+  .backlog-waiting-time {
+    font-size: 3em;
+  }
+  .another-info-count {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 400px) {
+  .another-info-text,
+  .backlog-waiting {
+    font-size: 2em;
+  }
+  .backlog-waiting-time {
+    font-size: 3em;
+  }
+  .another-info-count {
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 767px) {
+  .another-info {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 700px) {
+  .backlog-waiting {
+    font-size: 3em;
+  }
+  .another-info-text {
+    font-size: 2.3em;
+  }
+  .another-info-count {
+    font-size: 4em;
+  }
+}
+
+@media (min-width: 900px) {
+  .backlog-waiting {
+    font-size: 3.7em;
+  }
+}
+
+@media (min-width: 1100px) {
+  .backlog-waiting {
+    font-size: 4.7em;
+  }
+  .another-info-text {
+    font-size: 3.3em;
+  }
+  .another-info-count {
+    font-size: 7em;
+  }
+}
+
+@media (min-width: 1300px) {
+  .backlog-waiting {
+    font-size: 5.7em;
+  }
+}
+
+@media (min-width: 1500px) {
+  .container {
+    width: 100%;
+  }
+  .backlog-waiting {
+    font-size: 7em;
+  }
+  .another-info-text {
+    font-size: 4em;
+  }
+  .another-info-count {
+    font-size: 10em;
+  }
+}
+
+@media (min-width: 2000px) {
+  .backlog-waiting {
+    font-size: 9em;
+  }
+  .another-info-text {
+    font-size: 7em;
+  }
+  .another-info-count {
+    font-size: 15em;
+  }
+}

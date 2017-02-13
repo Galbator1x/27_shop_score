@@ -1,7 +1,25 @@
 # Shop Score Page
 
-{TODO. There will be project description}
+[This site](https://shop-score.herokuapp.com/) shows the waiting time backlog, their number and the number of processed orders today.
 
-# Project Goals
+## Installation
+
+```
+$ pip install -r requirements.txt
+$ export APP_SETTINGS="config.DevelopmentConfig"
+```
+
+## Usage
+
+For run site on localhost:
+```
+python server.py
+```
+
+## Requirements
+
+- Python >= 3.5
+
+## Project Goals
 
 The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
