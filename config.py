@@ -1,15 +1,12 @@
-import os
+class Config(object):
+    DEBUG = False
+    CSRF_ENABLED = True
 
 
-# class Config(object):
-#     DEBUG = False
-#     CSRF_ENABLED = True
+class ProductionConfig(Config):
+    DEBUG = False
 
 
-# class ProductionConfig(Config):
-#     DEBUG = False
-
-
-# class DevelopmentConfig(Config):
-#     DEVELOPMENT = True
-#     DEBUG = True
+class DevelopmentConfig(Config):
+    DEVELOPMENT = True
+    DEBUG = True
