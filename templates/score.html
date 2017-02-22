@@ -21,7 +21,7 @@
 
     <div class="container">
       <h1 class="backlog-waiting">Время ожидания необработанных заявок</h1>
-      <h1 class="backlog-waiting"><span class="backlog-waiting-time"></span> мин.</h1>
+      <h1 class="backlog-waiting backlog-waiting-color"><span class="backlog-waiting-time"></span> мин.</h1>
       <div class="another-info">
         <div class="text-center col-xs-12 col-sm-6 col-md-6 col-lg-6">
           <h3 class="another-info-text">Не обработано заказов</h3>
@@ -36,7 +36,28 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+      $(function () {
+        getScore();
+      });
+
+      function getScore() {
+        $.getJSON('/get_score', function (data) {
+          var backlogWaitingColor = '#2ECC40'; // green
+          var backlogWaitingTime = parseInt(data.backlogWaitingTime);
+          if (backlogWaitingTime > 7 && backlogWaitingTime <= 30) {
+            backlogWaitingColor = '#FFDC00' // yellow
+          } else if (backlogWaitingTime > 30) {
+            backlogWaitingColor = '#FF4136'; // red
+          };
+
+          $('.backlog-waiting-time').text(backlogWaitingTime.toString());
+          $('.backlog-waiting-color').css('color', data.backlogWaitingColor)
+          $('.backlog-count').text(data.backlogCount.toString());
+          $('.orders-processed').text(data.ordersProcessed.toString());
+        })
+      };
+      setInterval('getScore()', 10000);
+    </script>
   </body>
 </html>
