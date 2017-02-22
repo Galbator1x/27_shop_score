@@ -7,7 +7,7 @@ Site is adapted for all major browsers except IE and can be viewed at resolution
 
 ```
 $ pip install -r requirements.txt
-$ . dev.end
+$ . dev.env
 ```
 
 ## Usage
