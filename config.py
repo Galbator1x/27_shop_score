@@ -1,12 +1,5 @@
-class Config(object):
-    DEBUG = False
-    CSRF_ENABLED = True
+import os
 
 
-class ProductionConfig(Config):
-    DEBUG = False
-
-
-class DevelopmentConfig(Config):
-    DEVELOPMENT = True
-    DEBUG = True
+DEBUG = os.getenv('DEBUG', False)
+CSRF_ENABLED = os.getenv('CSRF_ENABLED', True)
