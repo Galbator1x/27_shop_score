@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.ext.automap import automap_base
 
 app = Flask(__name__)
-app.config.from_object(os.environ['APP_SETTINGS'])
+app.config.from_object('config')
 
 Base = automap_base()
 engine = create_engine('postgres://score:Rysherat2@shopscore.devman.org:5432/shop')
